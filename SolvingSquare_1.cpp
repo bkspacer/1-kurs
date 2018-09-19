@@ -100,8 +100,9 @@ int SolvingSquare (double a, double b, double c, double* x1, double* x2) {
 		}
 		
 		if (d > 0) {
-			*x1 = (-b + sqrt (d)) / (2*a);
-			*x2 = (-b - sqrt (d)) / (2*a);
+			double sd = sqrt(d);
+			*x1 = (-b + sd) / (2*a);
+			*x2 = (-b - sd) / (2*a);
 			return (2);
 		}
 		
